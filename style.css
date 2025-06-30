@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(2, 2, 58);
+    overflow: hidden;
+}
+
+nav{
+    width: 100vw;
+    padding: 0px 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo h1 span{
+    color: rgb(77, 92, 252);
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li{
+    list-style: none;
+    position: relative;
+}
+
+nav ul li::after{
+    content: " ";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-bottom: 2px solid blue;
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+}
+
+nav ul li:hover{
+   color: rgb(77, 92, 252);
+}
+nav ul li:hover:after{
+   width: 100%;
+}
+
+nav button{
+    padding: 7px 20px;
+    background-color: rgb(255, 1, 166);
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav button:hover{
+    background-color: rgb(246, 63, 182);
+
+}
+
+.portfolio{
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+}
+
+.left{
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left .circle{
+    width:25vw;
+    height:25vw;
+    border-radius: 50%;
+    background-color: rgb(98, 111, 254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 50px rgb(75, 88, 239);
+}
+
+.left img{
+    width: 45vw;
+}
+
+.right{
+    width: 60vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.right h1{
+    font-size: 50px;
+}
+
+.right h2{
+    font-size: 25px ;
+}
+
+.right h2 span{
+    color: rgb(77, 92, 252);
+
+}
+.right p{
+    width: 70%;
+    margin-top: 20px;
+}
+
+.right .social-media{
+    margin-top: 20px;
+}
+
+.right .social-media i{
+    color: rgb(77, 92, 252);
+    font-size: 25px;
+}
+
+.right .buttons{
+    margin-top: 5px;
+}
+
+.right .buttons button{
+    padding: 7px 25px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+}
+
+.right .buttons #hire{
+    background-color: rgb(94, 107, 240);
+    color: black;
+}
+
+.right .buttons #hire:hover{
+   background-color: transparent;
+    color: rgb(77, 92, 252);
+    outline: 2px solid rgb(138, 138, 254);
+}
+
+.right .buttons #contact{
+    background-color: transparent;
+    color: rgb(77, 92, 252);
+    border: 2px solid rgb(138, 138, 254);
+}
+
+.right .buttons #contact:hover{
+    background-color: #89a4fa;
+    color: black;
+}

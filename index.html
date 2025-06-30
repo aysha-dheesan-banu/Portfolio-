@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aysha dheesan banu | Portfolio</title>
+  <style>
+    :root {
+      --primary: #004aad;
+      --secondary: #e0e0e0;
+      --accent: #f39c12;
+      --text: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+      margin: 0;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    nav {
+      background: #f5f5f5;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skills-list li {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    .project {
+      margin-bottom: 1.5rem;
+    }
+
+    .project a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #fafafa;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .skills-list {
+        flex-direction: column;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Your Name</h1>
+      <p>Full-Stack Developer | Problem Solver | Tech Enthusiast</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>I am a passionate developer with a strong background in building scalable web applications. I enjoy solving real-world problems through clean, efficient code.</p>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Python</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>SQL/PostgreSQL</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Healthcare Management System</h3>
+      <p>A full-stack medical platform with appointment management, vaccination tracking, and a secure API. <br><a href="#">View on GitHub</a></p>
+    </div>
+    <div class="project">
+      <h3>Fraud Detection Pipeline</h3>
+      <p>Built a machine learning model to detect fraud on a dataset with 6M+ records. <br><a href="#">View Case Study</a></p>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>Email: yourname@example.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

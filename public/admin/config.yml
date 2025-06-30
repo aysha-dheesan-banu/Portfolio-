@@ -1,0 +1,129 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+# Uncomment below to enable drafts
+# publish_mode: editorial_workflow
+
+media_folder: public/assets/uploads # Media files will be stored in the repo under public/assets/uploads
+public_folder: /assets/uploads # The src attribute for uploaded media will begin with /assets/uploads
+
+collections:
+  # About Me Section
+  - name: "about"
+    label: "About Me"
+    files:
+      - file: "public/content/about/index.md"
+        label: "About Me"
+        name: "about"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Roles", name: "roles", widget: "list", default: ["Developer"]}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Profile Image", name: "image", widget: "image", required: false}
+          - {label: "Resume File", name: "resume", widget: "file", required: false}
+          - {label: "GitHub URL", name: "github", widget: "string", required: false}
+          - {label: "LinkedIn URL", name: "linkedin", widget: "string", required: false}
+
+  # Projects Collection
+  - name: "projects"
+    label: "Projects"
+    folder: "public/content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Project Image", name: "image", widget: "image", required: false}
+      - {label: "Tags", name: "tags", widget: "list", default: []}
+      - {label: "Category", name: "category", widget: "select", options: ["web app", "android app", "machine learning"], default: "web app"}
+      - {label: "GitHub URL", name: "github", widget: "string", required: false}
+      - {label: "Live Demo URL", name: "webapp", widget: "string", required: false}
+      - {label: "Team Members", name: "member", widget: "list", required: false, fields: [
+          {label: "Name", name: "name", widget: "string"},
+          {label: "Image", name: "img", widget: "image", required: false},
+          {label: "LinkedIn", name: "linkedin", widget: "string", required: false},
+          {label: "GitHub", name: "github", widget: "string", required: false}
+        ]}
+
+  # Skills Section
+  - name: "skills"
+    label: "Skills"
+    files:
+      - file: "public/content/skills/index.md"
+        label: "Skills"
+        name: "skills"
+        fields:
+          - {label: "Skills Categories", name: "skills", widget: "list", fields: [
+              {label: "Category Title", name: "title", widget: "string"},
+              {label: "Skills", name: "skills", widget: "list", fields: [
+                {label: "Skill Name", name: "name", widget: "string"},
+                {label: "Skill Image/Icon", name: "image", widget: "string"}
+              ]}
+            ]}
+
+  # Experience Section
+  - name: "experience"
+    label: "Experience"
+    folder: "public/content/experience"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Company Logo", name: "img", widget: "image", required: false}
+      - {label: "Role", name: "role", widget: "string"}
+      - {label: "Company", name: "company", widget: "string"}
+      - {label: "Date", name: "date", widget: "string"}
+      - {label: "Description", name: "desc", widget: "text"}
+      - {label: "Skills", name: "skills", widget: "list", default: []}
+      - {label: "Document/Certificate", name: "doc", widget: "string", required: false}
+
+  # Education Section
+  - name: "education"
+    label: "Education"
+    folder: "public/content/education"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Institution Logo", name: "img", widget: "image", required: false}
+      - {label: "School/University", name: "school", widget: "string"}
+      - {label: "Date", name: "date", widget: "string"}
+      - {label: "Grade/CGPA", name: "grade", widget: "string"}
+      - {label: "Description", name: "desc", widget: "text"}
+      - {label: "Degree", name: "degree", widget: "string"}
+
+  # Contact Information
+  - name: "contact"
+    label: "Contact Info"
+    files:
+      - file: "public/content/contact/index.md"
+        label: "Contact Information"
+        name: "contact"
+        fields:
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string", required: false}
+          - {label: "Address", name: "address", widget: "string", required: false}
+          - {label: "Contact Form Title", name: "form_title", widget: "string", default: "Email Me 🚀"}
+          - {label: "Contact Description", name: "description", widget: "text", default: "Feel free to reach out to me for any questions or opportunities!"}
+
+  # Resume Section
+  - name: "resume"
+    label: "Resume"
+    files:
+      - file: "public/content/resume/index.md"
+        label: "Resume"
+        name: "resume"
+        fields:
+          - {label: "Resume File", name: "resume_file", widget: "file"}
+          - {label: "Resume Description", name: "description", widget: "text", default: "Download my resume"}
+          - {label: "Button Text", name: "button_text", widget: "string", default: "Check Resume"}
+
+  # Timeline Data
+  - name: "timeline"
+    label: "Timeline"
+    folder: "public/content/timeline"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - {label: "Year", name: "year", widget: "number"}
+      - {label: "Text", name: "text", widget: "string"}
